@@ -53,19 +53,11 @@ final class SearchSubsequencesRunner extends AbstractRunner {
         LOGGER.info("In SearchSubsequencesRunner.run");
 
         String line;
-        boolean isFirstLine = true;
         while ((line = scanner.nextLine()) != null) {
             LOGGER.debug("Processing line: {}", line);
 
-            if (!isFirstLine) {
-                writer.newLine();
-            } else {
-                isFirstLine = false;
-            }
-
             BigInteger firstOccurrence = findFirstOccurrence(line);
             writer.writeBigInt(firstOccurrence);
-
 
             LOGGER.debug("First Occurrence: ", firstOccurrence);
         }

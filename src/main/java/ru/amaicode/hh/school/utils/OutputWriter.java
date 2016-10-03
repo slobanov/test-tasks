@@ -25,17 +25,10 @@ public final class OutputWriter {
     public void writeBigInt(BigInteger i) {
         try {
             writer.write(i.toString());
+            writer.write(System.lineSeparator());
+            writer.flush();
         } catch (IOException ioe) {
             LOGGER.error("Failed to write int: {}", i, ioe);
-            throw new IORuntimeException(ioe);
-        }
-    }
-
-    public void newLine() {
-        try {
-            writer.write(System.lineSeparator());
-        } catch (IOException ioe) {
-            LOGGER.error("Failed to write '\\n'", ioe);
             throw new IORuntimeException(ioe);
         }
     }

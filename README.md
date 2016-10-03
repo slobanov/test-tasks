@@ -23,10 +23,12 @@ __Идея алгоритма__:
 
 ### Сборка и запуск
 
-* Собираем fat-jar: 
+Собираем fat-jar: 
 ```$ mvn package ```
-* Запуск первого задания (Тропический остров):
+
+Запуск первого задания (Тропический остров):
 ```$ java -cp target/test-tasks.jar ru.amaicode.hh.school.runners.IslandFloodingRunner```
-* Запуск второго задания (Бесконечная последовательность):
+
+Запуск второго задания (Бесконечная последовательность):
 ```$ java -cp target/test-tasks.jar ru.amaicode.hh.school.runners.SearchSubsequencesRunner```
 

@@ -35,7 +35,7 @@ public enum TestRunner {
         )) {
             runner.run();
         }
-        return outStream.toString();
+        return outStream.toString().trim();
     }
 
     private static InputStream getTestData(String fileName) throws FileNotFoundException {
